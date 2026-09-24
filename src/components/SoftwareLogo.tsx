@@ -69,29 +69,21 @@ export const SoftwareLogo: React.FC<SoftwareLogoProps> = ({ type, className = ''
       );
 
     case 'capcut':
-      // CapCut iconic geometric bow-tie / overlapping chevron symbol
+      // CapCut official iconic logo (two overlapping horizontal trapezoids / bow-tie geometry)
       return (
         <div
           style={{ width: size, height: size }}
-          className={`rounded-xl flex items-center justify-center font-black select-none shadow-md border border-cyan-400/30 flex-shrink-0 bg-black p-1.5 ${className}`}
+          className={`rounded-xl flex items-center justify-center font-black select-none shadow-md border border-slate-700/60 flex-shrink-0 bg-black p-1.5 transition-transform ${className}`}
         >
-          <svg viewBox="0 0 100 100" className="w-full h-full">
-            <defs>
-              <linearGradient id="capcut-grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#ffffff" />
-                <stop offset="1" stopColor="#00F2FE" />
-              </linearGradient>
-            </defs>
-            {/* Top Chevron */}
+          <svg
+            viewBox="0 0 25 24"
+            className="w-full h-full"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
-              d="M15 28 L50 48 L85 28 L85 42 L50 62 L15 42 Z"
-              fill="url(#capcut-grad)"
-            />
-            {/* Bottom Chevron */}
-            <path
-              d="M15 58 L50 78 L85 58 L85 72 L50 92 L15 72 Z"
-              fill="#00F2FE"
-              opacity="0.9"
+              d="M24.189 6.442V2.671l-4.535 2.383V4.91c.002-1.505-1.078-2.411-2.638-2.411H2.64C.993 2.5 0 3.407 0 4.91V8.72L6.354 12 0 15.316v3.8C0 20.595 1 21.5 2.64 21.5h14.373c1.56 0 2.639-.907 2.639-2.382v-.197l4.536 2.409v-3.828L13.64 12 24.19 6.443zM9.982 13.873l7.797 4.083H2.157l7.825-4.083zm7.741-7.828l-7.742 4.057-7.825-4.057h15.567z"
+              fill="#FFFFFF"
             />
           </svg>
         </div>

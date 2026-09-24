@@ -26,9 +26,6 @@ export const ProfessionalTrainingSection: React.FC<ProfessionalTrainingSectionPr
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-950">
             Professional Training
           </h2>
-          <p className="mt-2 text-sm sm:text-base max-w-2xl text-slate-800 font-medium leading-relaxed">
-            Vocational training in small business management, modern digital production workflows, and practical operational execution.
-          </p>
         </div>
 
         {/* Professional Training Institution Showcase Banner */}

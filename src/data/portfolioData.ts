@@ -10,9 +10,9 @@ export const USER_INFO = {
   facebookUrl: 'https://www.facebook.com/ksg.shamim',
   address: 'Holding No.99, Satarkul, Uttar Badda, Dhaka-12',
   locationCity: 'Dhaka, Bangladesh',
-  profileImage: 'profile.jpg',
-  fallbackProfileImage: 'https://i.postimg.cc/sDMWVc40/Chat-GPT-Image-Sep-11-2026-10-16-34-AM.png',
-  postImgProfileUrl: 'https://postimg.cc/RNzhdw8c',
+  profileImage: 'profile.png',
+  fallbackProfileImage: 'https://i.postimg.cc/xT1qjt3L/Shamim-Hossain-3706-(1).png',
+  postImgProfileUrl: 'https://postimg.cc/SjHmDL5K',
   bio: '',
   skills: [
     'Dynamic Pacing & Beat Sync',
@@ -30,7 +30,7 @@ export const FEATURED_VIDEO: VideoProject = {
   youtubeId: 'wYZlfeXtEGs',
   title: 'Cinematic Editing Showreel & Visual Narrative',
   category: 'Featured Work / Trailer',
-  description: 'A hand-crafted showcase featuring rapid rhythmic cutting, synchronized audio accents, seamless transitions, and cinematic color palettes.',
+  description: '',
   tags: ['Showreel', 'Sound Design', 'Pacing', 'Color Grade']
 };
 

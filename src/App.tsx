@@ -21,50 +21,64 @@ import {
 } from './data/portfolioData';
 
 export default function App() {
-  // Website is permanently locked to Light mode per user specification
-  const theme: ThemeMode = 'light';
+  const [theme, setTheme] = useState<ThemeMode>(() => {
+    const saved = localStorage.getItem('portfolio_theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
 
   useEffect(() => {
-    localStorage.setItem('portfolio_theme', 'light');
-    document.documentElement.classList.add('light');
-    document.documentElement.classList.remove('dark');
-  }, []);
+    localStorage.setItem('portfolio_theme', theme);
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
+  const isDark = theme === 'dark';
 
   return (
     <div
       id="portfolio-root"
-      className="min-h-screen transition-colors duration-300 antialiased selection:bg-sky-500 selection:text-slate-950 font-sans bg-slate-50 text-slate-900"
+      className={`min-h-screen transition-colors duration-300 antialiased selection:bg-sky-500 selection:text-slate-950 font-sans ${
+        isDark ? 'bg-slate-950 text-slate-100 dark' : 'bg-slate-50 text-slate-900 light'
+      }`}
       style={{
-        backgroundColor: '#f8fafc',
-        color: '#0f172a'
+        backgroundColor: isDark ? '#090d16' : '#f8fafc',
+        color: isDark ? '#f1f5f9' : '#0f172a'
       }}
     >
       {/* Background ambient lighting accents */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div
-          className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[140px] opacity-15"
-          style={{
-            backgroundColor: '#38bdf8'
-          }}
+          className={`absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[140px] transition-opacity duration-500 ${
+            isDark ? 'opacity-20 bg-sky-500' : 'opacity-15 bg-sky-400'
+          }`}
         />
         <div
-          className="absolute top-[40%] -right-40 w-[600px] h-[500px] rounded-full blur-[160px] opacity-10"
-          style={{
-            backgroundColor: '#0ea5e9'
-          }}
+          className={`absolute top-[40%] -right-40 w-[600px] h-[500px] rounded-full blur-[160px] transition-opacity duration-500 ${
+            isDark ? 'opacity-15 bg-indigo-500' : 'opacity-10 bg-sky-500'
+          }`}
         />
       </div>
 
       {/* Main Content wrapper */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Navigation Bar */}
-        <Navbar theme={theme} />
+        {/* Navigation Bar with Theme & Toggle */}
+        <Navbar theme={theme} onToggleTheme={toggleTheme} />
 
         <main className="flex-1">
           {/* Hero Section with Profile & Featured Video Showreel */}
           <HeroSection theme={theme} featuredVideo={FEATURED_VIDEO} />
 
-          {/* Video Portfolio Grid (4 videos in a single row) */}
+          {/* Video Portfolio Grid */}
           <VideoGrid theme={theme} videos={PORTFOLIO_VIDEOS} />
 
           {/* Graphic Work Section */}

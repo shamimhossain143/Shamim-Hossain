@@ -43,9 +43,6 @@ export const GraphicSection: React.FC<GraphicSectionProps> = ({ theme, graphics 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-950">
               Graphic &amp; Poster Designs
             </h2>
-            <p className="mt-2 text-sm sm:text-base max-w-2xl text-slate-800 font-medium leading-relaxed">
-              Eye-catching thumbnails, editorial posters, and digital artwork designed to complement visual productions and captivate audiences.
-            </p>
           </div>
           <span className="text-xs font-bold px-3 py-1.5 rounded-full self-start sm:self-auto bg-slate-100 text-slate-700 border border-slate-200">
             Click image to open high-res lightbox
@@ -88,15 +85,12 @@ export const GraphicSection: React.FC<GraphicSectionProps> = ({ theme, graphics 
                 </div>
               </div>
 
-              {/* Card Caption */}
+              {/* Card Caption without raw filename */}
               <div className="p-3 sm:p-3.5 flex items-center justify-between">
                 <div className="min-w-0 pr-2">
                   <h3 className="font-black text-xs sm:text-sm text-slate-950 group-hover:text-sky-700 transition-colors truncate">
                     {item.title}
                   </h3>
-                  <span className="text-[11px] text-slate-600 font-medium block truncate">
-                    {item.filename}
-                  </span>
                 </div>
                 <div className="p-1.5 rounded-lg text-slate-500 group-hover:text-slate-950 group-hover:bg-slate-100 transition-colors shrink-0">
                   <Maximize2 className="w-3.5 h-3.5" />

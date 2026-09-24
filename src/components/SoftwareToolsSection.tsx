@@ -76,9 +76,6 @@ export const SoftwareToolsSection: React.FC<SoftwareToolsSectionProps> = ({
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-950">
             Software &amp; Tools
           </h2>
-          <p className="mt-2 text-sm sm:text-base max-w-2xl text-slate-800 font-medium leading-relaxed">
-            Industry-standard digital applications and modern creative suites powering video post-production, visual graphics, office management, and AI workflows.
-          </p>
         </div>
 
         {/* 4 Software Category Groups */}

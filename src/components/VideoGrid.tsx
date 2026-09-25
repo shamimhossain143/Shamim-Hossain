@@ -166,13 +166,15 @@ export const VideoGrid: React.FC<VideoGridProps> = ({ videos }) => {
                 {/* Card Meta & Compact Details */}
                 <div className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-sm font-black tracking-tight mb-1.5 text-slate-950 group-hover:text-sky-700 transition-colors line-clamp-2 leading-snug">
+                    <h3 className="text-sm font-black tracking-tight mb-2 text-slate-950 group-hover:text-sky-700 transition-colors line-clamp-2 leading-snug">
                       {video.title}
                     </h3>
 
-                    <p className="text-[11px] sm:text-xs leading-relaxed mb-3 text-slate-700 font-medium line-clamp-2">
-                      {video.description}
-                    </p>
+                    {video.description ? (
+                      <p className="text-[11px] sm:text-xs leading-relaxed mb-3 text-slate-700 font-medium line-clamp-2">
+                        {video.description}
+                      </p>
+                    ) : null}
                   </div>
 
                   {/* Action Link & Tags row */}

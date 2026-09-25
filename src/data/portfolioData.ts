@@ -40,7 +40,7 @@ export const PORTFOLIO_VIDEOS: VideoProject[] = [
     youtubeId: 'wYZlfeXtEGs',
     title: 'Professional Motion Design created By Adobe After Effects',
     category: 'Motion Design',
-    description: 'Dynamic typography, sleek shapes, smooth ease-in-out curves, and impactful motion design crafted in Adobe After Effects.',
+    description: '',
     tags: ['After Effects', 'Motion Design', 'Typography', 'Animation']
   },
   {
@@ -48,7 +48,7 @@ export const PORTFOLIO_VIDEOS: VideoProject[] = [
     youtubeId: 'pYMFoXSQ_h4',
     title: 'Smooth Camera Motion | Cinematic Camera Movement',
     category: 'Cinematic Camera',
-    description: 'Realistic depth of field, fluid 3D spatial camera tracking, and cinematic movement transitions in After Effects.',
+    description: '',
     tags: ['Camera Motion', 'Cinematic', '3D Space', 'After Effects']
   },
   {
@@ -56,7 +56,7 @@ export const PORTFOLIO_VIDEOS: VideoProject[] = [
     youtubeId: 'VmEapW-ZIuI',
     title: 'Null Object Motion | Smooth Animation',
     category: 'Motion & Animation',
-    description: 'Hierarchical animation mastery utilizing Null Objects, complex parenting structures, and fluid spatial choreography.',
+    description: '',
     tags: ['Null Object', 'Smooth Animation', 'After Effects', 'Keyframing']
   },
   {
@@ -64,7 +64,7 @@ export const PORTFOLIO_VIDEOS: VideoProject[] = [
     youtubeId: 'yqH7iL-dyMM',
     title: 'Telegram Logo Motion | Smooth Logo Animation',
     category: 'Logo Animation',
-    description: 'Clean branded vector morphing, trim paths, dynamic bounce physics, and modern logo intro reveal animation.',
+    description: '',
     tags: ['Logo Animation', 'Trim Paths', 'Motion Graphics', 'Branding']
   }
 ];
